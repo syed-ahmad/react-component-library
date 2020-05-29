@@ -1,8 +1,5 @@
 # React Component Library
 
-[![Build status](https://badge.buildkite.com/90ff98db996bb137c5be1bdce666c4b1ce68a25b17af0a6a04.svg?branch=master)](https://buildkite.com/harvey/react-component-library)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-
 This project skeleton was created to help people get started with creating their own React component library using:
 
 - [Rollup](https://github.com/rollup/rollup)
@@ -104,13 +101,13 @@ npm publish
 
 ## Consuming
 
-Let's say you created a public NPM package called `harvey-component-library` with the `TestComponent` component created in this repository.
+Let's say you created a public NPM package called `syed-component-library` with the `TestComponent` component created in this repository.
 
 Usage of the component (after the library installed as a dependency into another project) will be:
 
 ```TSX
 import React from "react";
-import { TestComponent } from "harvey-component-library";
+import { TestComponent } from "syed-component-library";
 
 const App = () => (
   <div className="app-container">
@@ -126,15 +123,15 @@ export default App;
 
 I've found that it's helpful to export SASS variables to projects consuming the library. As such, I've added the `rollup-plugin-copy` NPM package and used it to copy the `typography.scss` and `variables.scss` into the `build` directory as part of the Rollup bundle process. This allows you to use these variables in your projects consuming the component library.
 
-For example, let's say you installed `harvey-component-library` into your project. To use the exported variables/mixins, in a SASS file you would do the following:
+For example, let's say you installed `syed-component-library` into your project. To use the exported variables/mixins, in a SASS file you would do the following:
 
 ```Sass
-@import '~harvey-component-library/build/typography';
+@import '~syed-component-library/build/typography';
 
 .example-container {
     @include heading;
 
-    color: $harvey-white;
+    color: $syed-white;
 }
 ```
 

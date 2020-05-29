@@ -18,14 +18,14 @@ describe("Test Component", () => {
   const renderComponent = () => render(<${componentName} {...props} />);
 
   it("should render foo text correctly", () => {
-    props.foo = "harvey was here";
+    props.foo = "syed was here";
     const { getByTestId } = renderComponent();
 
     const component = getByTestId("${componentName}");
 
-    expect(component).toHaveTextContent("harvey was here");
+    expect(component).toHaveTextContent("syed was here");
   });
 });
 `,
-  extension: `.test.tsx`
+  extension: `.test.tsx`,
 });
